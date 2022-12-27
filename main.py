@@ -5,7 +5,7 @@ import telebot
 
 refers = {'rpg' : 'https://stopgame.ru/games/rpg/best', 'рпг' : 'https://stopgame.ru/games/rpg/best', 'action' : 'https://stopgame.ru/games/action/best', 'экшн' : 'https://stopgame.ru/games/action/best', 'adventure' : 'https://stopgame.ru/games/adventure/best', 'приключение' : 'https://stopgame.ru/games/adventure/best', 'arcade' : 'https://stopgame.ru/games/arcade/best', 'аркада' : 'https://stopgame.ru/games/arcade/best', 'fighting' : 'https://stopgame.ru/games/fighting/best', 'файтинг' : 'https://stopgame.ru/games/fighting/best', 'mmo' : 'https://stopgame.ru/games/massively_multiplayer/best', 'ммо' : 'https://stopgame.ru/games/massively_multiplayer/best', 'online' : 'https://stopgame.ru/games/online/best', 'онлайн' : 'https://stopgame.ru/games/online/best', 'racing' : 'https://stopgame.ru/games/racing/best', 'гонки' : 'https://stopgame.ru/games/racing/best', 'simulator' : 'https://stopgame.ru/games/simulator/best', 'симулятор' : 'https://stopgame.ru/games/simulator/best', 'sport' : 'https://stopgame.ru/games/sport/best', 'спорт' : 'https://stopgame.ru/games/sport/best', 'strategy' : 'https://stopgame.ru/games/strategy/best', 'стратегия' : 'https://stopgame.ru/games/strategy/best'}
 
-token = "5921000643:AAF2KGwaKXmGv2kVi3ENxRSvMJ0Z9g5cduM"
+token = "your bot's token"
 bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands = ["start"])
