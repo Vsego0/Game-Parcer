@@ -3,136 +3,7 @@ from bs4 import BeautifulSoup
 from random import choice
 import telebot
 
-def rpg():
-    response = requests.get('https://stopgame.ru/games/rpg/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    x = name + "\n" + link
-    return x
-
-def action():
-    response = requests.get('https://stopgame.ru/games/action/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    print(name + "\n" + link)
-    x = name + "\n" + link
-    return x
-
-def adventure():
-    response = requests.get('https://stopgame.ru/games/adventure/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    print(name + "\n" + link)
-    x = name + "\n" + link
-    return x
-
-def arcade():
-    response = requests.get('https://stopgame.ru/games/arcade/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    print(name + "\n" + link)
-    x = name + "\n" + link
-    return x
-
-def fighting():
-    response = requests.get('https://stopgame.ru/games/fighting/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    print(name + "\n" + link)
-    x = name + "\n" + link
-    return x
-
-def mmo():
-    response = requests.get('https://stopgame.ru/games/massively_multiplayer/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    print(name + "\n" + link)
-    x = name + "\n" + link
-    return x
-
-def online():
-    response = requests.get('https://stopgame.ru/games/online/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    print(name + "\n" + link)
-    x = name + "\n" + link
-    return x
-
-def racing():
-    response = requests.get('https://stopgame.ru/games/racing/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    print(name + "\n" + link)
-    x = name + "\n" + link
-    return x
-
-def simulator():
-    response = requests.get('https://stopgame.ru/games/simulator/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    print(name + "\n" + link)
-    x = name + "\n" + link
-    return x
-
-def sport():
-    response = requests.get('https://stopgame.ru/games/sport/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    print(name + "\n" + link)
-    x = name + "\n" + link
-    return x
-
-def strategy():
-    response = requests.get('https://stopgame.ru/games/strategy/best')
-    response = response.content
-    html = BeautifulSoup(response, 'html.parser')
-    games = html.find_all("a", class_ = "_card_67304_1")
-    game = choice(games)
-    name = game["title"]
-    link = "https://stopgame.ru/" + game["href"]
-    print(name + "\n" + link)
-    x = name + "\n" + link
-    return x
+refers = {'rpg' : 'https://stopgame.ru/games/rpg/best', 'рпг' : 'https://stopgame.ru/games/rpg/best', 'action' : 'https://stopgame.ru/games/action/best', 'экшн' : 'https://stopgame.ru/games/action/best', 'adventure' : 'https://stopgame.ru/games/adventure/best', 'приключение' : 'https://stopgame.ru/games/adventure/best', 'arcade' : 'https://stopgame.ru/games/arcade/best', 'аркада' : 'https://stopgame.ru/games/arcade/best', 'fighting' : 'https://stopgame.ru/games/fighting/best', 'файтинг' : 'https://stopgame.ru/games/fighting/best', 'mmo' : 'https://stopgame.ru/games/massively_multiplayer/best', 'ммо' : 'https://stopgame.ru/games/massively_multiplayer/best', 'online' : 'https://stopgame.ru/games/online/best', 'онлайн' : 'https://stopgame.ru/games/online/best', 'racing' : 'https://stopgame.ru/games/racing/best', 'гонки' : 'https://stopgame.ru/games/racing/best', 'simulator' : 'https://stopgame.ru/games/simulator/best', 'симулятор' : 'https://stopgame.ru/games/simulator/best', 'sport' : 'https://stopgame.ru/games/sport/best', 'спорт' : 'https://stopgame.ru/games/sport/best', 'strategy' : 'https://stopgame.ru/games/strategy/best', 'стратегия' : 'https://stopgame.ru/games/strategy/best'}
 
 token = "5921000643:AAF2KGwaKXmGv2kVi3ENxRSvMJ0Z9g5cduM"
 bot = telebot.TeleBot(token)
@@ -171,28 +42,16 @@ def contacts(message):
     bot.send_message(message.from_user.id, contact)
 
 @bot.message_handler(content_types = ["text"])
-def send_game(message):
-    if message.text.lower() == "rpg" or message.text.lower() == "рпг":
-        bot.send_message(message.from_user.id, rpg())
-    elif message.text.lower() == "action" or message.text.lower() == "экшн":
-        bot.send_message(message.from_user.id, action())
-    elif message.text.lower() == "adventure" or message.text.lower() == "приключение":
-        bot.send_message(message.from_user.id, adventure())
-    elif message.text.lower() == "arcade" or message.text.lower() == "аркада":
-        bot.send_message(message.from_user.id, arcade())
-    elif message.text.lower() == "fighting" or message.text.lower() == "файтинг":
-        bot.send_message(message.from_user.id, fighting())
-    elif message.text.lower() == "mmo" or message.text.lower() == "ммо":
-        bot.send_message(message.from_user.id, mmo())
-    elif message.text.lower() == "online" or message.text.lower() == "онлайн":
-        bot.send_message(message.from_user.id, online())
-    elif message.text.lower() == "racing" or message.text.lower() == "гонки":
-        bot.send_message(message.from_user.id, racing())
-    elif message.text.lower() == "simulator" or message.text.lower() == "симулятор":
-        bot.send_message(message.from_user.id, simulator())
-    elif message.text.lower() == "sport" or message.text.lower() == "спорт":
-        bot.send_message(message.from_user.id, sport())
-    elif message.text.lower() == "strategy" or message.text.lower() == "стратегия":
-        bot.send_message(message.from_user.id, strategy())
+def game(message):
+    response = requests.get(refers[message.text.lower()])
+    response = response.content
+    html = BeautifulSoup(response, 'html.parser')
+    games = html.find_all("a", class_ = "_card_67304_1")
+    game = choice(games)
+    name = game["title"]
+    link = "https://stopgame.ru/" + game["href"]
+    print(name + "\n" + link)
+    x = name + "\n" + link
+    bot.send_message(message.from_user.id, x)
 
 bot.polling(none_stop=True, interval=0)
