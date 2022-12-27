@@ -134,7 +134,7 @@ def strategy():
     x = name + "\n" + link
     return x
 
-token = "5921000643:AAF2KGwaKXmGv2kVi3ENxRSvMJ0Z9g5cduM"
+token = "your bot's token"
 bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands = ["start"])
